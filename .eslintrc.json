@@ -1,3 +1,47 @@
 {
-  "extends": "next/core-web-vitals"
+  "parser": "babel-eslint",
+  "plugins": ["react"],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "experimentalObjectRestSpread": true
+    }
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true,
+    "mocha": true,
+    "jest": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "standard",
+    "plugin:prettier/recommended"
+  ],
+  "rules": {
+    "semi": ["error", "always"],
+    "no-console": "error",
+    "no-eval": "error",
+    "no-extra-parens": "error",
+    "no-template-curly-in-string": "error",
+    "standard/no-callback-literal": 0,
+    "indent": ["error", "tab", { "SwitchCase": 1, "CallExpression": {"arguments": "off"}, "ObjectExpression": "off", "ArrayExpression": "off", "MemberExpression": "off" }],
+    "no-tabs": ["error", { "allowIndentationTabs": true }],
+    "space-before-function-paren": [
+      "error",
+      {
+        "anonymous": "never",
+        "named": "never",
+        "asyncArrow": "never"
+      }
+    ],
+    
+    "one-var": ["error", {
+      "uninitialized": "always"
+    }]
+  }
 }
